@@ -35,4 +35,56 @@ fun DataPelanggan(
     var alamat by remember { mutableStateOf(value = "") }
     var listData: MutableList<String> = mutableListOf(nama, noHp, alamat)
 
+    Column(
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .fillMaxSize()) {
+        Text(text = "Data Pelanggan",
+            textAlign = TextAlign.Center,
+            fontSize = 20.sp)
+        Spacer(modifier = Modifier.padding(10.dp))
+        OutlinedTextField(
+            value = nama,
+            onValueChange = {nama = it},
+            label = { Text(text = "Nama")},
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(15.dp))
+        OutlinedTextField(
+            value = noHp,
+            onValueChange = {noHp = it},
+            label = { Text(text = "No Hp")},
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(15.dp))
+        OutlinedTextField(
+            value = alamat,
+            onValueChange = {alamat = it},
+            label = { Text(text = "Alamat")},
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(15.dp))
+        Spacer(modifier = Modifier.padding(2.dp))
+
+        Row(modifier = Modifier
+            .padding(dimensionResource(R.dimen.padding_medium))
+            .weight(1f, false),
+            horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
+            verticalAlignment = Alignment.Bottom){
+
+            OutlinedButton(
+                modifier = Modifier,
+                onClick = onCancelButtonClicked) {
+                Text(text = stringResource(id = R.string.cancel))
+            }
+            Spacer(modifier = Modifier.padding(16.dp))
+            OutlinedButton (
+                modifier = Modifier,
+                onClick = { onSubmitButtonClicked(listData) }) {
+                Text(text = stringResource(id = R.string.btn_submit))
+            }
+        }
+    }
+
 }
