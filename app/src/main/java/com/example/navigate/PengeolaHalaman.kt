@@ -96,7 +96,7 @@ fun EsJumboApp(
                     onConfirmButtonClicked = { viewModel.setJumlah(it) },
                     onNextButtonClicked = { navController.navigate(PengelolaHalaman.Summary.name) },
                     onCancelButtonClicked = {
-                        cancelOrderAndNavigateToHome(
+                        cancelOrderAndNavigateToPelanggan(
                             viewModel,
                             navController
                         )
@@ -116,6 +116,13 @@ private fun cancelOrderAndNavigateToHome(
 ) {
     viewModel.resetOrder()
     navController.popBackStack(PengelolaHalaman.Home.name, inclusive = false)
+}
+private fun cancelOrderAndNavigateToPelanggan(
+    viewModel: OrderViewModel,
+    navController: NavHostController
+) {
+    viewModel.resetOrder()
+    navController.popBackStack(PengelolaHalaman.Pelanggan.name, inclusive = false)
 }
 
 private fun cancelOrderAndNavigateToRasa(
