@@ -58,7 +58,7 @@ fun HalamanHome(
                 Text(
                     text = "Es Teh",
                     color = Color.DarkGray,
-                    fontFamily = FontFamily.Cursive,
+                    fontFamily = FontFamily.Default,
                     fontSize = 35.sp,
                     modifier = Modifier.align(Alignment.CenterHorizontally)
                 )
