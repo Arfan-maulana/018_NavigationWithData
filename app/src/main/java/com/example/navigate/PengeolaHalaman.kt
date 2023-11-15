@@ -27,7 +27,8 @@ import com.example.navigate.Data.SumberData.flavors
 enum class PengelolaHalaman {
     Home,
     Rasa,
-    Summary
+    Summary,
+    Pelanggan
 }
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
