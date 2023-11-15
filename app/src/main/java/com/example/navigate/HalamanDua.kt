@@ -28,7 +28,8 @@ fun HalamanDua(
 ){
     val items = listOf(
         Pair(stringResource(R.string.quantity), orderUIState.jumlah),
-        Pair(stringResource(R.string.flavor),orderUIState.rasa)
+        Pair(stringResource(R.string.flavor),orderUIState.rasa),
+
     )
     Column(
         modifier = modifier,
