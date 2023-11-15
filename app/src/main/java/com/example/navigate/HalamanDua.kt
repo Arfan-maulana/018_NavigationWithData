@@ -27,6 +27,9 @@ fun HalamanDua(
     orderUIState: OrderUiState
 ){
     val items = listOf(
+        Pair(stringResource(R.string.nama), orderUIState.namaPelanggan),
+        Pair(stringResource(R.string.nomorhp), orderUIState.nomorTelepon),
+        Pair(stringResource(R.string.alamat), orderUIState.alamat),
         Pair(stringResource(R.string.quantity), orderUIState.jumlah),
         Pair(stringResource(R.string.flavor),orderUIState.rasa),
 
