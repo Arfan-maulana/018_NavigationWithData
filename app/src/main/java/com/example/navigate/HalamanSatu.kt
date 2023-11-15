@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import org.w3c.dom.Text
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HalamanSatu(
     pilihanRasa : List<String>,

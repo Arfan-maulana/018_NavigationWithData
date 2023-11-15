@@ -65,7 +65,7 @@ fun HalamanHome(
                 Text(
                     text = "Minum brok?",
                     color = Color.DarkGray,
-                    fontFamily = FontFamily.Cursive,
+                    fontFamily = FontFamily.Default,
                     fontStyle = FontStyle.Italic,
                     fontSize = 40.sp,
                     fontWeight = FontWeight.Bold
